@@ -119,6 +119,7 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#user_id').trigger('change');
   $('#userCrudModal').html("Tambah Pendonor");
   $('#crud-modal').modal('show');
+  $('#class-status').hide();
   $('#userForm').attr("action","{{route('pendonor.store')}}");
   
   
@@ -148,6 +149,7 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userCrudModal').html("Edit pendonor");
   $('#btn-update').val("Update");
   $('#crud-modal').modal('show');
+  $('#class-status').show();
   $('#pendonor_id').val(data.id);
   $('#nama').val(data.nama);
   $('#no_telp').val(data.no_telp);
@@ -157,6 +159,7 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#user_id').val(data.users_id);
   $('#provinsi').val(data.provinsi);
   $('#regensi').val(data.regensi);
+  $('#status').val(data.status);
   $('#provinsi').trigger('change');
   $('#regensi').trigger('change');
   $('#user_id').trigger('change');

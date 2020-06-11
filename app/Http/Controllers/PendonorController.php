@@ -44,6 +44,9 @@ class PendonorController extends Controller
             ->editColumn('provinsi',function($row){
                 return $row->province->name;
             })
+            ->editColumn('regensi', function ($row) {
+                    return $row->regencie->name;
+            })
             ->addColumn('points',function($row){
                 $points = 0;
                 foreach ($row->donor as $value) {

@@ -84,6 +84,17 @@
                                                         </div>
                                                 </div>
 
+                                                <div class="col-xs-12 col-sm-12 col-md-12" id="class-status">
+                                                        <div class="form-group">
+                                                                <label>Status</label>
+                                                                <select class="form-control" name="status" id="status">
+                                                                        <option value="">Pilih Status</option>
+                                                                        <option value="1">Aktif</option>
+                                                                        <option value="0">Tidak AKtif</option>
+                                                                </select>
+                                                        </div>
+                                                </div>
+
 
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12">

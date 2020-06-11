@@ -40,7 +40,7 @@
                                                         <div class="form-group">
                                                                 <label>Provinsi</label>
                                                                 <select class="form-control select2"
-                                                                        style="width: 100%;" name="provinsi"
+                                                                        style="width: 100%; " name="provinsi"
                                                                         id="provinsi">
                                                                         <option value="">Pilih PROVINSI</option>
                                                                         @foreach ($provinsis as $id => $name)

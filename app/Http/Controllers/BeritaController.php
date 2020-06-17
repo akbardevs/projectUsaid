@@ -34,7 +34,11 @@ class BeritaController extends Controller
                 return '<img width="100px" src="'.$url.'" class="rounded mx-auto d-block" />';
             })
             ->addColumn('action', function ($row) {
+<<<<<<< HEAD
                 $action = '<a class="btn btn-info btn-sm" id="edit-gambar" data-toggle="modal" data-id='.$row->id.' title="Show"><i class="far fa-image"></i></a>
+=======
+                $action = '<a class="btn btn-secondary btn-sm" id="edit-gambar" data-toggle="modal" data-id='.$row->id.' title="Show"><i class="far fa-image"></i></a>
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             <a class="btn btn-success btn-sm" id="edit-berita" data-toggle="modal" data-id='.$row->id.' title="Edit"><i class="far fa-edit"></i> </a>
             <meta name="csrf-token" content="{{ csrf_token() }}">
             <a id="delete-berita" data-id='.$row->id.' class="btn btn-danger delete-berita btn-sm" title="Hapus"><i class="far fa-trash-alt"></i> </a>';
@@ -78,6 +82,10 @@ class BeritaController extends Controller
     {
         $request->validate([
             'judul' => 'required',
+<<<<<<< HEAD
+=======
+            'kategori' => 'required',
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'deskripsi' => 'required',
             'waktu_posting' => 'required',
@@ -92,6 +100,10 @@ class BeritaController extends Controller
 		    $file->move($tujuan_upload,$nama_file);
             
             $berita= new Berita;
+<<<<<<< HEAD
+=======
+            $berita->kategori = $request->kategori;
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             $berita->judul = $request->judul;
             $berita->foto = $nama_file;
             $berita->deskripsi = $request->deskripsi;
@@ -142,6 +154,10 @@ class BeritaController extends Controller
     {
          $r=$request->validate([
             'judul' => 'required',
+<<<<<<< HEAD
+=======
+            'kategori' => 'required',
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             'deskripsi' => 'required',
             'waktu_posting' => 'required',
             
@@ -156,7 +172,11 @@ class BeritaController extends Controller
         
         
             
+<<<<<<< HEAD
             Berita::where('id', $uId)->update(['judul' => $request->judul, 'deskripsi' => $request->deskripsi, 'waktu_posting' => $request->waktu_posting]);
+=======
+            Berita::where('id', $uId)->update(['judul' => $request->judul, 'deskripsi' => $request->deskripsi, 'waktu_posting' => $request->waktu_posting, 'kategori' => $request->kategori]);
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             Alert::success('Selamat','Data Berhasil Di Edit');
         
         return redirect()->route('berita.index');

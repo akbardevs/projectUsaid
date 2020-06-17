@@ -43,6 +43,7 @@
           <tr id="">
             <th width="2%">No</th>
             <th>Nama</th>
+<<<<<<< HEAD
             <th>Tanggal Lahir</th>
             <th>No.Telp</th>
             <th>Provinsi</th>
@@ -50,6 +51,14 @@
             <th>GD</th>
             <th>Last Donation</th>
             <th>Points</th>
+=======
+            <th>Provinsi</th>
+            <th>Regensi</th>
+            <th>Kecamatan</th>
+            <th>GD</th>
+            <th>Last Donation</th>
+            <th>Tikets</th>
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -93,6 +102,7 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   columns: [
   {data: 'DT_RowIndex', name: 'DT_RowIndex'},
   {data: 'nama', name: 'nama'},
+<<<<<<< HEAD
   {data: 'tgl_lahir', name: 'tgl_lahir'},
   {data: 'no_telp', name: 'no_telp'},
   {data: 'provinsi', name: 'provinsi'},
@@ -100,6 +110,14 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   {data: 'gol_darah', name: 'gol_darah'},
   {data: 'last_donation', name: 'last_donation'},
   {data: 'points', name: 'points'},
+=======
+  {data: 'provinsi', name: 'provinsi'},
+  {data: 'regensi', name: 'regensi'},
+  {data: 'kec', name: 'kec'},
+  {data: 'gol_darah', name: 'gol_darah'},
+  {data: 'last_donation', name: 'last_donation'},
+  {data: 'tiket', name: 'tiket'},
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   {data: 'status', name: 'status'},
   {data: 'action', name: 'action', orderable: false, searchable: false},
   ]
@@ -116,9 +134,19 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userForm').trigger("reset");
   $('#provinsi').trigger('change');
   $('#regensi').trigger('change');
+<<<<<<< HEAD
   $('#user_id').trigger('change');
   $('#userCrudModal').html("Tambah Pendonor");
   $('#crud-modal').modal('show');
+=======
+  $('#kec').trigger('change');
+  $('#user_id').trigger('change');
+  $('#userCrudModal').html("Tambah Pendonor");
+  $('#crud-modal').modal('show');
+  $('#class-foto').show();
+  $('#class-status').hide();
+  $('#class-tiket').hide();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#userForm').attr("action","{{route('pendonor.store')}}");
   
   
@@ -148,6 +176,12 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userCrudModal').html("Edit pendonor");
   $('#btn-update').val("Update");
   $('#crud-modal').modal('show');
+<<<<<<< HEAD
+=======
+  $('#class-status').show();
+  $('#class-foto').hide();
+  $('#class-tiket').show();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#pendonor_id').val(data.id);
   $('#nama').val(data.nama);
   $('#no_telp').val(data.no_telp);
@@ -157,8 +191,18 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#user_id').val(data.users_id);
   $('#provinsi').val(data.provinsi);
   $('#regensi').val(data.regensi);
+<<<<<<< HEAD
   $('#provinsi').trigger('change');
   $('#regensi').trigger('change');
+=======
+  $('#detail_alamat').val(data.detail_alamat);
+  $('#kec').val(data.kec);
+  $('#status').val(data.status);
+  $('#tiket').val(data.tiket);
+  $('#provinsi').trigger('change');
+  $('#regensi').trigger('change');
+  $('#kec').trigger('change');
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#user_id').trigger('change');
 
 
@@ -166,6 +210,7 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   });
 
 
+<<<<<<< HEAD
   
 
 
@@ -181,6 +226,60 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   // $('#userCrudModal-show').html("User Details");
   // $('#crud-modal-show').modal('show');
   // });
+=======
+  /* Ganti Gambar */
+  $('body').on('click', '#edit-gambar', function () {
+  var pendonor_id = $(this).data('id');
+  $('#userFormgambar').attr("action","{{route('pendonor.gambar')}}");
+  $.get('/pendonor/'+pendonor_id+'/edit', function (data) {
+  $('#userCrudModalgambar').html("Edit Gambar");
+  $('#btn-update').val("Ganti");
+  $('#crud-modal-gambar').modal('show');
+  $('#pendonor_id').val(data.id);
+  $('#class-foto').show();
+  
+  
+  })
+  });
+
+
+  
+
+
+  /* Show customer */
+  $('body').on('click', '#show-user', function () {
+  var pendonor_id = $(this).data('id');
+  $.get('/pendonor/'+pendonor_id+'/edit', function (data) {
+  if (data.status == 1) {
+    var stat = "Aktif";
+  } else {
+    var stat = "Tidak Aktif";
+  }
+  $('#sname').html(data.nama);
+  $('#sno_telp').html(data.no_telp);
+  $('#stgl_lahir').html(data.tgl_lahir);
+  $('#sprovinsi').html(data.province.name);
+  $('#sregensi').html(data.regencie.name);
+  $('#skec').html(data.district.name);
+  $('#sgol_darah').html(data.gol_darah);
+  $('#salamat').html(data.detail_alamat);
+  $('#sstatus').html(stat);
+  $('#susers').html(data.user.name);
+  $('#stiket').html(data.tiket);
+  if (data.foto == 0 || data.foto == null) {
+    $("#sfoto").attr("src", "{{asset('/adminlte/dist/img/user2-160x160.jpg')}}");
+  } else {
+    
+    $("#sfoto").attr("src", "{{asset('/pendonor_file')}}/"+data.foto);
+  }
+  
+
+  
+  })
+  $('#userCrudModal-show').html("Pendonor Details");
+  $('#crud-modal-show').modal('show');
+  });
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   
   /* Delete customer */
   $('body').on('click', '#delete-pendonor', function () {

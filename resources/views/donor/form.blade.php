@@ -8,6 +8,10 @@
                         <div class="modal-body">
                                 <form id="userForm" name="userForm" method="POST">
                                         <input type="hidden" name="donor_id" id="donor_id">
+<<<<<<< HEAD
+=======
+
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                         @csrf
                                         <div class="row">
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -26,7 +30,11 @@
                                                                         required>
                                                         </div>
                                                 </div>
+<<<<<<< HEAD
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
+=======
+                                                <div class="col-xs-12 col-sm-12 col-md-12" id="class-points">
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                         <div class="form-group">
                                                                 <strong>Point:</strong>
                                                                 <input type="number" name="points" id="points"

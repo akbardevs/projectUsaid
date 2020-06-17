@@ -39,6 +39,10 @@
         <thead>
           <tr id="">
             <th width="2%">No</th>
+<<<<<<< HEAD
+=======
+            <th>Kategori</th>
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             <th>Judul</th>
             <th>Foto</th>
             <th>Deskripsi</th>
@@ -91,6 +95,10 @@
   ajax: "{{ route('berita.index') }}",
   columns: [
   {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+<<<<<<< HEAD
+=======
+  {data: 'kategori', name: 'kategori'},
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   {data: 'judul', name: 'judul'},
   {data: 'foto', name: 'foto'},
   {data: 'deskripsi', name: 'deskripsi'},
@@ -109,6 +117,10 @@
   $('#crud-modal').modal('show');
   $('#userForm').attr("action","{{route('berita.store')}}");
   $('#class-foto').show();
+<<<<<<< HEAD
+=======
+  $('#class-kategori').show();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#class-waktu_posting').show();
   $('#class-deskripsi').show();
   $('#class-judul').show();
@@ -134,10 +146,18 @@
   $('#waktu_posting').val(date_for(data.waktu_posting));
   $('#deskripsi').summernote('code',data.deskripsi);
   $('#judul').val(data.judul);
+<<<<<<< HEAD
+=======
+  $('#kategori').val(data.kategori);
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#class-foto').hide();
   $('#class-waktu_posting').show();
   $('#class-deskripsi').show();
   $('#class-judul').show();
+<<<<<<< HEAD
+=======
+  $('#class-kategori').show();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
   })
@@ -157,6 +177,10 @@
   $('#class-deskripsi').hide();
   $('#class-judul').hide();
   $('#class-foto').show();
+<<<<<<< HEAD
+=======
+  $('#class-kategori').hide();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
   })

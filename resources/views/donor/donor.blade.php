@@ -103,6 +103,10 @@ $('.select2').select2();
   $('#pendonor_id').trigger('change');
   $('#userCrudModal').html("Tambah Darah");
   $('#crud-modal').modal('show');
+<<<<<<< HEAD
+=======
+  $('#class-points').show();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#userForm').attr("action","{{route('donor.store')}}");
   
   
@@ -126,7 +130,11 @@ $('.select2').select2();
   $('#donor_id').val(data.id);
   $('#jumlah').val(data.jumlah);
   $('#tgl_donor').val(data.tgl_donor);
+<<<<<<< HEAD
   $('#points').val(data.points);
+=======
+  $('#class-points').hide();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
   })

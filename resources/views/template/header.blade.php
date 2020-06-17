@@ -132,7 +132,11 @@
         </div>
 
         <div class="dropdown-divider"></div>
+<<<<<<< HEAD
         <a class="dropdown-item dropdown-footer" href="{{ route('logout') }}" onclick="event.preventDefault();
+=======
+        <a class="dropdown-item dropdown-footer" href="{{url('/')}}" onclick="event.preventDefault();
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                      document.getElementById('logout-form').submit();">
           {{ __('Logout') }}</a>
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">

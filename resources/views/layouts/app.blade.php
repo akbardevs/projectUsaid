@@ -1,4 +1,100 @@
+<<<<<<< HEAD
 <!doctype html>
+=======
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <title>login Mananajemen Darah</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <!--===============================================================================================-->
+    <link rel="icon" href="{{asset('/adminlte/dist/img/logo_darah.png')}}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('adminlte/logintema/vendor/bootstrap/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('adminlte/dist/plugins/fontawesome-free/css/all.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/fonts/iconic/css/material-design-iconic-font.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/vendor/animate/animate.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/vendor/css-hamburgers/hamburgers.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/vendor/animsition/css/animsition.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/vendor/select2/select2.min.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/vendor/daterangepicker/daterangepicker.css')}}">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="{{asset('logintema/css/util.css')}}">
+    <link rel="stylesheet" href="{{asset('logintema/css/main.css')}}">
+    <!--===============================================================================================-->
+
+</head>
+
+<body>
+
+
+    <main class="py-4">
+        @yield('content')
+    </main>
+
+
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/animsition/js/animsition.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/bootstrap/js/popper.js')}}"></script>
+    <script src="{{asset('logintema/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/select2/select2.min.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/daterangepicker/moment.min.js')}}"></script>
+    <script src="{{asset('logintema/vendor/daterangepicker/daterangepicker.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/vendor/countdowntime/countdowntime.js')}}"></script>
+    <!--===============================================================================================-->
+    <script src="{{asset('logintema/js/main.js')}}"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- <!doctype html>
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -23,7 +119,11 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
+<<<<<<< HEAD
 <body class="hold-transition login-page">
+=======
+<body class="hold-transition logintema-page"> --}}
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
     {{-- <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -46,7 +146,11 @@
             <!-- Authentication Links -->
             @guest
             <li class="nav-item">
+<<<<<<< HEAD
                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+=======
+                <a class="nav-link" href="{{ route('logintema') }}">{{ __('logintema') }}</a>
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             </li>
             @if (Route::has('register'))
             <li class="nav-item">
@@ -77,7 +181,11 @@
     </div>
     </nav> --}}
 
+<<<<<<< HEAD
     <main class="py-4">
+=======
+    {{-- <main class="py-4">
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
         @yield('content')
     </main>
     </div>
@@ -90,4 +198,8 @@
     <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+</html> --}}
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce

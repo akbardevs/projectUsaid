@@ -1,5 +1,6 @@
 <?php
 
+<<<<<<< HEAD
 
 use Illuminate\Http\Request;
 use Intervention\Image\Image;
@@ -9,6 +10,11 @@ use Illuminate\Support\Facades\Route;
 
 
 
+=======
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -23,6 +29,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+<<<<<<< HEAD
 Route::get('users', 'ApiUser@index');
 Route::get('users2', 'ApiUser@select');
 Route::get('/berita/{id}', 'ApiUser@berita');
@@ -55,3 +62,5 @@ Route::get('foto/{action}/{filename}', function ($action,$filename)
     return $response;
     // return Image::make(storage_path('public/uploads/' . $filename))->response();
 });
+=======
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce

@@ -79,6 +79,7 @@ class HomeController extends Controller
             $tom = 0;
         foreach ($donor as $value) {
            
+<<<<<<< HEAD
             // if ($value->pendonor->gol_darah == 'A+') {
             //     $tap = $tap + $value->jumlah;
             // } else if ($value->pendonor->gol_darah == 'A-') {
@@ -96,6 +97,25 @@ class HomeController extends Controller
             // } else {
             //     $tom = $tom + $value->jumlah;
             // }
+=======
+            if ($value->pendonor->gol_darah == 'A+') {
+                $tap = $tap + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'A-') {
+                $tam = $tam + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'B+') {
+                $tbp = $tbp + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'B-') {
+                $tbm = $tbm + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'AB+') {
+                $tabp = $tabp + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'AB-') {
+                $tabm = $tabm + $value->jumlah;
+            } else if ($value->pendonor->gol_darah == 'O+') {
+                $top = $top + $value->jumlah;
+            } else {
+                $tom = $tom + $value->jumlah;
+            }
+>>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             
         }
 

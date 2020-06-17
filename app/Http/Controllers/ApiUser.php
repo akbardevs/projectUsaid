@@ -102,7 +102,7 @@ class ApiUser extends Controller
             $user->role = $request->role;
             $user->password = Hash::make("12345678");
             $user->save();
-            return gresponse()->json(['success'=>true,'message'=>'baru']);
+            return response()->json(['success'=>true,'message'=>'baru']);
          } else {
             return 0;
          }

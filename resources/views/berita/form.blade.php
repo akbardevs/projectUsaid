@@ -10,8 +10,6 @@
                                         <input type="hidden" name="berita_id" id="berita_id">
                                         @csrf
                                         <div class="row">
-<<<<<<< HEAD
-=======
                                                 <div class="col-xs-12 col-sm-12 col-md-12" id="class-kategori">
                                                         <div class="form-group">
                                                                 <label>Kategori</label>
@@ -24,7 +22,6 @@
                                                                 </select>
                                                         </div>
                                                 </div>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                 <div class="col-xs-12 col-sm-12 col-md-12" id="class-judul">
                                                         <div class="form-group">
                                                                 <strong>Judul:</strong>

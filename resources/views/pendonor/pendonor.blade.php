@@ -43,22 +43,12 @@
           <tr id="">
             <th width="2%">No</th>
             <th>Nama</th>
-<<<<<<< HEAD
-            <th>Tanggal Lahir</th>
-            <th>No.Telp</th>
-            <th>Provinsi</th>
-            <th>Regensi</th>
-            <th>GD</th>
-            <th>Last Donation</th>
-            <th>Points</th>
-=======
             <th>Provinsi</th>
             <th>Regensi</th>
             <th>Kecamatan</th>
             <th>GD</th>
             <th>Last Donation</th>
             <th>Tikets</th>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             <th>Status</th>
             <th>Action</th>
           </tr>
@@ -102,22 +92,12 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   columns: [
   {data: 'DT_RowIndex', name: 'DT_RowIndex'},
   {data: 'nama', name: 'nama'},
-<<<<<<< HEAD
-  {data: 'tgl_lahir', name: 'tgl_lahir'},
-  {data: 'no_telp', name: 'no_telp'},
-  {data: 'provinsi', name: 'provinsi'},
-  {data: 'regensi', name: 'regensi'},
-  {data: 'gol_darah', name: 'gol_darah'},
-  {data: 'last_donation', name: 'last_donation'},
-  {data: 'points', name: 'points'},
-=======
   {data: 'provinsi', name: 'provinsi'},
   {data: 'regensi', name: 'regensi'},
   {data: 'kec', name: 'kec'},
   {data: 'gol_darah', name: 'gol_darah'},
   {data: 'last_donation', name: 'last_donation'},
   {data: 'tiket', name: 'tiket'},
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   {data: 'status', name: 'status'},
   {data: 'action', name: 'action', orderable: false, searchable: false},
   ]
@@ -134,11 +114,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userForm').trigger("reset");
   $('#provinsi').trigger('change');
   $('#regensi').trigger('change');
-<<<<<<< HEAD
-  $('#user_id').trigger('change');
-  $('#userCrudModal').html("Tambah Pendonor");
-  $('#crud-modal').modal('show');
-=======
   $('#kec').trigger('change');
   $('#user_id').trigger('change');
   $('#userCrudModal').html("Tambah Pendonor");
@@ -146,7 +121,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#class-foto').show();
   $('#class-status').hide();
   $('#class-tiket').hide();
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#userForm').attr("action","{{route('pendonor.store')}}");
   
   
@@ -176,12 +150,9 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userCrudModal').html("Edit pendonor");
   $('#btn-update').val("Update");
   $('#crud-modal').modal('show');
-<<<<<<< HEAD
-=======
   $('#class-status').show();
   $('#class-foto').hide();
   $('#class-tiket').show();
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#pendonor_id').val(data.id);
   $('#nama').val(data.nama);
   $('#no_telp').val(data.no_telp);
@@ -191,10 +162,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#user_id').val(data.users_id);
   $('#provinsi').val(data.provinsi);
   $('#regensi').val(data.regensi);
-<<<<<<< HEAD
-  $('#provinsi').trigger('change');
-  $('#regensi').trigger('change');
-=======
   $('#detail_alamat').val(data.detail_alamat);
   $('#kec').val(data.kec);
   $('#status').val(data.status);
@@ -202,7 +169,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#provinsi').trigger('change');
   $('#regensi').trigger('change');
   $('#kec').trigger('change');
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   $('#user_id').trigger('change');
 
 
@@ -210,23 +176,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   });
 
 
-<<<<<<< HEAD
-  
-
-
-  // /* Show customer */
-  // $('body').on('click', '#show-user', function () {
-  // var user_id = $(this).data('id');
-  // $.get('/user/'+user_id, function (data) {
-  
-  // $('#sname').html(data.name);
-  // $('#semail').html(data.email);
-  
-  // })
-  // $('#userCrudModal-show').html("User Details");
-  // $('#crud-modal-show').modal('show');
-  // });
-=======
   /* Ganti Gambar */
   $('body').on('click', '#edit-gambar', function () {
   var pendonor_id = $(this).data('id');
@@ -279,7 +228,6 @@ $('[data-toggle="switch"]').bootstrapSwitch();
   $('#userCrudModal-show').html("Pendonor Details");
   $('#crud-modal-show').modal('show');
   });
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
   
   /* Delete customer */
   $('body').on('click', '#delete-pendonor', function () {

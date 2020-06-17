@@ -1,9 +1,5 @@
 <?php
 
-<<<<<<< HEAD
-use Illuminate\Support\Facades\Auth;
-=======
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,10 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pendonor/{id}/edit/','PendonorController@edit');
     Route::post('/pendonor/update','PendonorController@update')->name('pendonor.update');
     Route::get('/pendonor/drop','PendonorController@drop');
-<<<<<<< HEAD
-=======
     Route::post('/pendonor/gambar','PendonorController@gambar')->name('pendonor.gambar');
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
     //Donor Route
     Route::resource('/donor', 'DonorController');

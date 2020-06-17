@@ -40,11 +40,7 @@
                                                         <div class="form-group">
                                                                 <label>Provinsi</label>
                                                                 <select class="form-control select2"
-<<<<<<< HEAD
-                                                                        style="width: 100%;" name="provinsi"
-=======
                                                                         style="width: 100%; " name="provinsi"
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                                         id="provinsi">
                                                                         <option value="">Pilih PROVINSI</option>
                                                                         @foreach ($provinsis as $id => $name)
@@ -56,8 +52,6 @@
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                                         <div class="form-group">
-<<<<<<< HEAD
-=======
                                                                 <strong>Alamat:</strong>
                                                                 <input type="text" name="detail_alamat"
                                                                         id="detail_alamat" class="form-control"
@@ -67,7 +61,6 @@
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                                         <div class="form-group">
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                                 <label>Regensi</label>
                                                                 <select class="form-control select2"
                                                                         style="width: 100%;" name="regensi"
@@ -79,8 +72,6 @@
                                                                 </select>
                                                         </div>
                                                 </div>
-<<<<<<< HEAD
-=======
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                                         <div class="form-group">
                                                                 <label>Kecamatan</label>
@@ -93,17 +84,12 @@
                                                                 </select>
                                                         </div>
                                                 </div>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
 
                                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                                         <div class="form-group">
-<<<<<<< HEAD
-                                                                <label>Golongan Darah</label>
-=======
                                                                 <label>Gol Darah</label>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
                                                                 <select class="form-control" name="gol_darah"
                                                                         id="gol_darah">
                                                                         <option value="">Pilih Gol Darah</option>
@@ -118,8 +104,6 @@
                                                                 </select>
                                                         </div>
                                                 </div>
-<<<<<<< HEAD
-=======
                                                 <div class="col-xs-12 col-sm-12 col-md-12" id="class-tiket">
                                                         <div class="form-group">
                                                                 <strong>Tiket:</strong>
@@ -138,7 +122,6 @@
                                                                 </select>
                                                         </div>
                                                 </div>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
 
@@ -156,8 +139,6 @@
                                                         </div>
                                                 </div>
 
-<<<<<<< HEAD
-=======
                                                 <div class="col-xs-12 col-sm-12 col-md-12" id="class-foto">
                                                         <div class="form-group">
                                                                 <strong>Foto:</strong>
@@ -166,7 +147,6 @@
                                                         </div>
                                                 </div>
 
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
 
 
@@ -190,11 +170,7 @@
 
 
 
-<<<<<<< HEAD
-{{-- <!-- Show user modal -->
-=======
 <!-- Show user modal -->
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 <div class="modal fade" id="crud-modal-show" aria-hidden="true">
         <div class="modal-dialog">
                 <div class="modal-content">
@@ -207,16 +183,6 @@
                                         <div class="col-xs-10 col-sm-10 col-md-10 ">
 
                                                 <table class="table-responsive ">
-<<<<<<< HEAD
-                                                        <tr height="50px">
-                                                                <td><strong>Name:</strong></td>
-                                                                <td id="sname"></td>
-                                                        </tr>
-                                                        <tr height="50px">
-                                                                <td><strong>Email:</strong></td>
-                                                                <td id="semail"></td>
-                                                        </tr>
-=======
 
                                                         <tr height="50px">
                                                                 <td><img width="100px"
@@ -270,23 +236,10 @@
                                                                 <td id="susers"></td>
                                                         </tr>
 
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 
                                                         <tr>
                                                                 <td></td>
                                                                 <td style="text-align: right "><a
-<<<<<<< HEAD
-                                                                                href="{{ route('user.index') }}"
-class="btn btn-danger">OK</a> </td>
-</tr>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div> --}}
-=======
                                                                                 href="{{ route('pendonor.index') }}"
                                                                                 class="btn btn-danger">OK</a> </td>
                                                         </tr>
@@ -338,4 +291,3 @@ class="btn btn-danger">OK</a> </td>
                 </div>
         </div>
 </div>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce

@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<!doctype html>
-=======
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
@@ -94,7 +91,6 @@
 
 
 {{-- <!doctype html>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
@@ -119,11 +115,7 @@
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-<<<<<<< HEAD
-<body class="hold-transition login-page">
-=======
 <body class="hold-transition logintema-page"> --}}
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
     {{-- <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
@@ -146,11 +138,7 @@
             <!-- Authentication Links -->
             @guest
             <li class="nav-item">
-<<<<<<< HEAD
-                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-=======
                 <a class="nav-link" href="{{ route('logintema') }}">{{ __('logintema') }}</a>
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             </li>
             @if (Route::has('register'))
             <li class="nav-item">
@@ -181,11 +169,7 @@
     </div>
     </nav> --}}
 
-<<<<<<< HEAD
-    <main class="py-4">
-=======
     {{-- <main class="py-4">
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
         @yield('content')
     </main>
     </div>
@@ -198,8 +182,4 @@
     <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
 </body>
 
-<<<<<<< HEAD
-</html>
-=======
 </html> --}}
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce

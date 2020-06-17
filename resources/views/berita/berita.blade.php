@@ -39,6 +39,7 @@
         <thead>
           <tr id="">
             <th width="2%">No</th>
+            <th>Kategori</th>
             <th>Judul</th>
             <th>Foto</th>
             <th>Deskripsi</th>
@@ -91,6 +92,7 @@
   ajax: "{{ route('berita.index') }}",
   columns: [
   {data: 'DT_RowIndex', name: 'DT_RowIndex'},
+  {data: 'kategori', name: 'kategori'},
   {data: 'judul', name: 'judul'},
   {data: 'foto', name: 'foto'},
   {data: 'deskripsi', name: 'deskripsi'},
@@ -109,6 +111,7 @@
   $('#crud-modal').modal('show');
   $('#userForm').attr("action","{{route('berita.store')}}");
   $('#class-foto').show();
+  $('#class-kategori').show();
   $('#class-waktu_posting').show();
   $('#class-deskripsi').show();
   $('#class-judul').show();
@@ -134,10 +137,12 @@
   $('#waktu_posting').val(date_for(data.waktu_posting));
   $('#deskripsi').summernote('code',data.deskripsi);
   $('#judul').val(data.judul);
+  $('#kategori').val(data.kategori);
   $('#class-foto').hide();
   $('#class-waktu_posting').show();
   $('#class-deskripsi').show();
   $('#class-judul').show();
+  $('#class-kategori').show();
 
 
   })
@@ -157,6 +162,7 @@
   $('#class-deskripsi').hide();
   $('#class-judul').hide();
   $('#class-foto').show();
+  $('#class-kategori').hide();
 
 
   })

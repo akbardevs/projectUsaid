@@ -103,6 +103,7 @@ $('.select2').select2();
   $('#pendonor_id').trigger('change');
   $('#userCrudModal').html("Tambah Darah");
   $('#crud-modal').modal('show');
+  $('#class-points').show();
   $('#userForm').attr("action","{{route('donor.store')}}");
   
   
@@ -126,7 +127,7 @@ $('.select2').select2();
   $('#donor_id').val(data.id);
   $('#jumlah').val(data.jumlah);
   $('#tgl_donor').val(data.tgl_donor);
-  $('#points').val(data.points);
+  $('#class-points').hide();
 
 
   })

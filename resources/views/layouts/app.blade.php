@@ -2,13 +2,13 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>logintema V3</title>
+    <title>login Mananajemen Darah</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!--===============================================================================================-->
-    <link rel="icon" href="{{asset('logintema/images/icons/favicon.ico')}}" />
+    <link rel="icon" href="{{asset('/adminlte/dist/img/logo_darah.png')}}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" href="{{asset('adminlte/logintema/vendor/bootstrap/css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="{{asset('adminlte/dist/plugins/fontawesome-free/css/all.min.css')}}">

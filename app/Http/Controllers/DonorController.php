@@ -88,6 +88,14 @@ class DonorController extends Controller
             $donor->points = $request->points;
             $donor->pendonor_id = $request->pendonor_id;
             $donor->save();
+
+            $uId = $request->pendonor_id;
+            $pendonor = Pendonor::where('id', $uId)->first();
+            $points = $pendonor->points;
+            $point = $points + $request->points;
+            $tiket = floor($point / 20) + $pendonor->tiket;
+            $endpoint = $point % 20;
+            Pendonor::where('id', $uId)->update(['points' => $endpoint,'tiket' => $tiket]);
            
             
             
@@ -146,7 +154,8 @@ class DonorController extends Controller
         
         
             
-            Donor::where('id', $uId)->update(['jumlah' => $request->jumlah, 'tgl_donor' => $request->tgl_donor, 'pendonor_id' => $request->pendonor_id, 'points' => $request->points]);
+            Donor::where('id', $uId)->update(['jumlah' => $request->jumlah, 'tgl_donor' => $request->tgl_donor, 'pendonor_id' => $request->pendonor_id]);
+            
             Alert::success('Selamat','Data Berhasil Di Edit');
         
         return redirect()->route('donor.index');

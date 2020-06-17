@@ -33,6 +33,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/pendonor/{id}/edit/','PendonorController@edit');
     Route::post('/pendonor/update','PendonorController@update')->name('pendonor.update');
     Route::get('/pendonor/drop','PendonorController@drop');
+    Route::post('/pendonor/gambar','PendonorController@gambar')->name('pendonor.gambar');
 
     //Donor Route
     Route::resource('/donor', 'DonorController');

@@ -15,10 +15,14 @@ class Pendonor extends Model
     {
     	return $this->belongsTo('App\Regencie','regensi');
     }
+    public function district()
+    {
+    	return $this->belongsTo('App\District','kec');
+    }
 
     public function user()
     {
-    	return $this->belongsTo('App\User');
+    	return $this->belongsTo('App\User','users_id');
     }
 
      public function donor() { 

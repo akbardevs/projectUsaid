@@ -82,10 +82,7 @@ class BeritaController extends Controller
     {
         $request->validate([
             'judul' => 'required',
-<<<<<<< HEAD
-=======
             'kategori' => 'required',
->>>>>>> 523802307866a9c2c3544bac332fa9f813494cce
             'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'deskripsi' => 'required',
             'waktu_posting' => 'required',

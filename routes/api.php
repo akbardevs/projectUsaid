@@ -28,11 +28,13 @@ Route::get('users2', 'ApiUser@select');
 Route::get('/berita/{id}', 'ApiUser@berita');
 Route::post('adduser', 'ApiUser@create');
 Route::post('cek', 'ApiUser@CekLogin');
+// Route::post('cek', 'ApiUser@CekLoginAdmin');
 Route::post('provinsi', 'ApiUser@provinsi');
 Route::post('edit', 'ApiUser@profilEdit');
 Route::post('inputFoto', 'ApiUser@Foto');
 Route::post('pendonor', 'ApiUser@selectAll');
 Route::post('login', 'ApiUser@loginUser');
+Route::post('loginAdmin', 'ApiUser@loginAdmin');
 Route::delete('/user/{id}', 'ApiUser@delete');
 Route::get('foto/{action}/{filename}', function ($action,$filename)
 {

@@ -18,6 +18,7 @@ class ApiUser extends Controller
     }
 
     public function create(Request $request){
+        
         $user= new User;
         $user->name = $request->nama;
         $user->email = $request->email;
@@ -25,19 +26,23 @@ class ApiUser extends Controller
         $user->password = Hash::make("12345678");
         $user->save();
         
-        $pendonor= new Pendonor();
-        $pendonor->nama = $request->nama;
-        $pendonor->no_telp = $request->no_telp;
-        $pendonor->tgl_lahir = $request->tgl_lahir;
-        $pendonor->provinsi = $request->provinsi;
-        $pendonor->regensi = $request->regensi;
-        $pendonor->kec = $request->kec;
-        $pendonor->detail_alamat = $request->detail_alamat;
-        $pendonor->gol_darah = $request->gol_darah;
-        $pendonor->last_donor = $request->last_donor;
-        $pendonor->foto = $request->foto;
-        $pendonor->tiket = 0;
-        $pendonor->save();
+        if($request->req!='admin' && $request->req==null){
+            $user = User::where('email', '=',$request->email);
+            $pendonor= new Pendonor();
+            $pendonor->users_id = $user->value("id");
+            $pendonor->nama = $request->nama;
+            $pendonor->no_telp = $request->no_telp;
+            $pendonor->tgl_lahir = $request->tgl_lahir;
+            $pendonor->provinsi = $request->provinsi;
+            $pendonor->regensi = $request->regensi;
+            $pendonor->kec = $request->kec;
+            $pendonor->detail_alamat = $request->detail_alamat;
+            $pendonor->gol_darah = $request->gol_darah;
+            $pendonor->last_donor = $request->last_donor;
+            $pendonor->foto = $request->foto;
+            $pendonor->tiket = 0;
+            $pendonor->save();
+        }
         return 1;
     }
     public function delete($id){
@@ -108,6 +113,7 @@ class ApiUser extends Controller
          }
 
     }
+
 
     public function select(){
         return DB::select('select * from pendonors');
@@ -202,6 +208,21 @@ class ApiUser extends Controller
         }
             return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
     }
+
+    public function loginAdmin(Request $request){
+        $email = $request->email;
+        $password = $request->pass;
+        $user = User::where('email', '=', $email)->first();
+        if (!$user) {
+            return response()->json(['success'=>false, 'message' => 'Login Fail, please check email id']);
+        }
+        if (!Hash::check($password, $user->value("password"))) {
+            return response()->json(['success'=>false, 'message' => 'Login Fail, pls check password']);
+        } else if($request->role=="Staff"){
+            return response()->json(['success'=>true,'message'=>'success', 'data' => $user]);
+        }
+            
+    }
     
     public function selectAll(Request $request){
         $user = User::where('email', '=',$request->email);
@@ -214,9 +235,10 @@ class ApiUser extends Controller
         return $pendonor;
     }
     public function berita($id){
-        $user = User::where('id', '=',$id);
+        $user = User::where('email', '=',$id);
         if ($user -> count() > 0) {
-            return Berita::orderBy("waktu_posting","desc")->take(5)->get();
+            // return Berita::orderBy("waktu_posting","desc")->take(5)->get();
+            return Berita::all();
         }
         
     }

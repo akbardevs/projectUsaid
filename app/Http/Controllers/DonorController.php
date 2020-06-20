@@ -31,10 +31,22 @@ class DonorController extends Controller
             return datatables()->of($data)
             ->addIndexColumn()
             ->editColumn('pendonor_id', function($row){
-                return $row->pendonor->nama;
+                if ($row->pendonor == null) {
+                    $reg = "";
+                } else {
+                    $reg = $row->pendonor->nama ;
+                }
+                
+                    return $reg;
             })
             ->addColumn('gol_darah', function($row){
-                return $row->pendonor->gol_darah;
+                 if ($row->pendonor == null) {
+                    $gd = "";
+                } else {
+                    $gd = $row->pendonor->gol_darah;
+                }
+                
+                    return $gd;
             })
             ->addColumn('action', function ($row) {
                 $action = '<a class="btn btn-success btn-sm" id="edit-donor" data-toggle="modal" data-id='.$row->id.' title="Edit"><i class="far fa-edit"></i> </a>

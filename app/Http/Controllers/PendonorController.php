@@ -44,13 +44,31 @@ class PendonorController extends Controller
                 return "$status";
             })
             ->editColumn('provinsi',function($row){
-                return $row->province->name;
+                if ($row->province == null) {
+                    $pro = "";
+                } else {
+                    $pro = $row->province->name ;
+                }
+                
+                    return $pro;
             })
             ->editColumn('regensi', function ($row) {
-                    return $row->regencie->name;
+                    if ($row->regencie == null) {
+                    $reg = "";
+                } else {
+                    $reg = $row->regencie->name ;
+                }
+                
+                    return $reg;
             })
             ->editColumn('kec', function ($row) {
-                    return $row->district->name;
+                if ($row->district == null) {
+                    $kec = "";
+                } else {
+                    $kec = $row->district->name ;
+                }
+                
+                    return $kec;
             })
             ->addColumn('last_donation',function($row){
                 $tgl = '1990-09-09';

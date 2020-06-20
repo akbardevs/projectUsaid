@@ -80,7 +80,11 @@ $('[data-toggle="switch"]').bootstrapSwitch();
 
 <script type="text/javascript">
   $(document).ready(function () {
+    // $.fn.dataTable.ext.errMode = 'none';
     
+    // $('.data-table').on( 'error.dt', function ( e, settings, techNote, message ) {
+    // console.log( 'An error has been reported by DataTables: ', message );
+    // } ) ;
 
     $('#alert').fadeOut(4000);
   

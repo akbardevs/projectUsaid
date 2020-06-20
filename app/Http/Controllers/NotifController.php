@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\MessageBag;
 use Redirect,Response;
 use App\Notif;
+use App\User;
 use File;
 
 class NotifController extends Controller
@@ -19,7 +20,8 @@ class NotifController extends Controller
      */
    public function index()
     {
-        return view('notif');
+        $user = User::pluck('email','id');
+        return view('notif',['users' => $user,]);
     }
 
     /**
@@ -44,6 +46,7 @@ class NotifController extends Controller
             'judul' => 'required',
             'foto' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'deskripsi' => 'required',
+            'tujuan' => 'required',
             
             
 
@@ -55,6 +58,7 @@ class NotifController extends Controller
 		    $file->move($tujuan_upload,$nama_file);
             
             $notif= new Notif;
+            $notif->tujuan = $request->tujuan;
             $notif->judul = $request->judul;
             $notif->foto = $nama_file;
             $notif->deskripsi = $request->deskripsi;

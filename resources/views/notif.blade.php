@@ -26,6 +26,15 @@
         @csrf
         <div class="card-body">
           <div class="form-group">
+            <label>Tujuan</label>
+            <select class="form-control select2" style="width: 100%;" name="tujuan" id="tujuan">
+              <option value="semua">Semua</option>
+              @foreach ($users as $id => $email)
+              <option value="{{$id}}">{{$email}}</option>
+              @endforeach
+            </select>
+          </div>
+          <div class="form-group">
             <label for="judul">Judul</label>
             <input type="text" name="judul" id="judul" class="form-control" placeholder="Judul">
           </div>
@@ -51,3 +60,10 @@
 </section>
 @endsection
 <script src="{{asset('adminlte/dist/plugins/jquery/jquery.min.js')}}"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+$('.select2').select2();
+$('[data-toggle="switch"]').bootstrapSwitch();
+});
+
+</script>

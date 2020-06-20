@@ -51,8 +51,3 @@
 </section>
 @endsection
 <script src="{{asset('adminlte/dist/plugins/jquery/jquery.min.js')}}"></script>
-<script type="text/javascript">
-  $(document).ready(function () {
-  $('#deskripsi').summernote('code','');
-});
-</script>

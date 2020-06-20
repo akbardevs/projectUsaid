@@ -8,7 +8,6 @@
                         <div class="modal-body">
                                 <form id="userForm" name="userForm" method="POST">
                                         <input type="hidden" name="donor_id" id="donor_id">
-
                                         @csrf
                                         <div class="row">
                                                 <div class="col-xs-12 col-sm-12 col-md-12">

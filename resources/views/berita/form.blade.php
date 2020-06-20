@@ -42,7 +42,14 @@
                                                                 <strong>Deskripsi:</strong>
                                                                 <textarea name="deskripsi" id="deskripsi"
                                                                         class="form-control" cols="30"
-                                                                        rows="10"></textarea>
+                                                                        rows="5"></textarea>
+                                                        </div>
+                                                </div>
+                                                <div class="col-xs-12 col-sm-12 col-md-12" id="class-judul">
+                                                        <div class="form-group">
+                                                                <strong>Link:</strong>
+                                                                <input type="text" name="link" id="link"
+                                                                        class="form-control" placeholder="Link">
                                                         </div>
                                                 </div>
                                                 <div class="col-xs-12 col-sm-12 col-md-12" id="class-waktu_posting">

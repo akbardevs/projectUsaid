@@ -43,6 +43,7 @@
             <th>Judul</th>
             <th>Foto</th>
             <th>Deskripsi</th>
+            <th>Link</th>
             <th>Waktu Posting</th>
             <th>Action</th>
           </tr>
@@ -96,6 +97,7 @@
   {data: 'judul', name: 'judul'},
   {data: 'foto', name: 'foto'},
   {data: 'deskripsi', name: 'deskripsi'},
+  {data: 'link', name: 'link'},
   {data: 'waktu_posting', name: 'waktu_posting'},
   {data: 'action', name: 'action', orderable: false, searchable: false},
   ]
@@ -115,7 +117,7 @@
   $('#class-waktu_posting').show();
   $('#class-deskripsi').show();
   $('#class-judul').show();
-  $('#deskripsi').summernote('code','');
+  $('#deskripsi').show();
   
   
   });
@@ -135,8 +137,9 @@
   $('#crud-modal').modal('show');
   $('#berita_id').val(data.id);
   $('#waktu_posting').val(date_for(data.waktu_posting));
-  $('#deskripsi').summernote('code',data.deskripsi);
+  $('#deskripsi').val(data.deskripsi);
   $('#judul').val(data.judul);
+  $('#link').val(data.link);
   $('#kategori').val(data.kategori);
   $('#class-foto').hide();
   $('#class-waktu_posting').show();
